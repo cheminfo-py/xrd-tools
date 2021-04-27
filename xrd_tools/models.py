@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Pydantic input and response models"""
-from typing import Optional
+from typing import Optional, List
 
 from pydantic import BaseModel, validator
 from pymatgen.analysis.diffraction.xrd import WAVELENGTHS
@@ -8,6 +8,26 @@ from pymatgen.analysis.diffraction.xrd import WAVELENGTHS
 from . import __version__
 
 EXTENSIONS = "cif"
+
+
+class XRDReflexes(BaseModel):
+    x: List[float]
+    y: List[float]
+
+
+class XRDDatabaseEntry(BaseModel):
+    """Representing an XRD database entry"""
+
+    name: str  # for example, ORIWIG
+    source: str  # for example, CSD
+    composition: str  # sorted chemical formula
+    a: float  # cell constant a in Angstrom
+    b: float  # cell constant b in Angstromß
+    c: float  # cell constant c in Angstrom
+    alpha: float  # cell angle alpha in degree
+    beta: float  # cell angle beta in degree
+    gamma: float  # cell angle gamma in degree
+    reflexes: XRDReflexes
 
 
 class XRDResponse(BaseModel):
