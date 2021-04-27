@@ -30,6 +30,10 @@ class XRDDatabaseEntry(BaseModel):
     reflexes: XRDReflexes
 
 
+class XRDDatabaseEntries(BaseModel):
+    entries: List[XRDDatabaseEntry]
+
+
 class XRDResponse(BaseModel):
     """Default response for XRD prediction"""
 
@@ -103,3 +107,10 @@ class LatticeInput(BaseModel):
                 "Wavelength must be in {}".format(", ".join(list(WAVELENGTHS.keys())))
             )
         return value
+
+
+class MatchingInput(BaseModel): 
+    """Input for the matching of PXRD patterns to the database"""
+    x: List[float] # angle in two-theta
+    y: List[float] # intensity, does not need to be scaled 
+    k: int = 10 # the number of matches that should be returned

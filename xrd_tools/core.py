@@ -5,7 +5,7 @@ import pymatgen
 import hashlib
 import pytojcamp
 from func_timeout import func_set_timeout
-from pymatgen import Lattice, Structure
+from pymatgen.core import Lattice, Structure
 from pymatgen.analysis.diffraction.xrd import XRDCalculator
 from pytojcamp import from_dict
 
