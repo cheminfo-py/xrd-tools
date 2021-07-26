@@ -3,7 +3,7 @@ uvicorn==0.13.4
 httptools==0.2.0
 uvloop==0.14.0
 pytojcamp>0.0.1
-pymatgen==2022.0.6
+pymatgen==2022.0.11
 func-timeout==4.3.5
 python-dotenv==0.15.0
 motor==2.3.0
