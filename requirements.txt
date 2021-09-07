@@ -1,7 +1,7 @@
 fastapi== 0.68.1
 uvicorn==0.15.0
 httptools==0.3.0
-uvloop==0.16.0
+uvloop>=0.15.0
 pytojcamp>0.0.1
 pymatgen==2022.0.6
 func-timeout==4.3.5
