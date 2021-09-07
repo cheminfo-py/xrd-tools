@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """Testing basic working of the API"""
 import os
-
+import sys 
+sys.path.append('../')
 from fastapi.testclient import TestClient
 
 from xrd_tools import __version__, app
