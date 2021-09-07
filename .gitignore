@@ -202,3 +202,5 @@ tags
 # End of https://www.toptal.com/developers/gitignore/api/python,macos,vscode,vim
 
 *.bson
+dev
+mongo-data
