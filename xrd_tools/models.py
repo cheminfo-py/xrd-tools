@@ -28,7 +28,7 @@ class XRDDatabaseEntry(BaseModel):
     beta: float  # cell angle beta in degree
     gamma: float  # cell angle gamma in degree
     reflexes: XRDReflexes
-
+    apiVersion: Optional[str] = __version__
 
 class XRDDatabaseEntries(BaseModel):
     entries: List[XRDDatabaseEntry]
@@ -51,8 +51,15 @@ class DataBaseEntry(BaseModel):
     y: list
     hkls: list
     dbName: str
-    link: str
+    link: Optional[str] # if we can make a link, we create a link to the COD, or CSD. For the hypothetical databases we currently cannot do that
     cif: str
+    composition: Optional[str] 
+    a: Optional[float]  # cell constant a in Angstrom
+    b: Optional[float]  # cell constant b in Angstromß
+    c: Optional[float]  # cell constant c in Angstrom
+    alpha: Optional[float]  # cell angle alpha in degree
+    beta: Optional[float]  # cell angle beta in degree
+    gamma: Optional[float]  # cell angle gamma in degree
     apiVersion: Optional[str] = __version__
 
 
