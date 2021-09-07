@@ -28,10 +28,6 @@ class XRDDatabaseEntry(BaseModel):
     beta: float  # cell angle beta in degree
     gamma: float  # cell angle gamma in degree
     reflexes: XRDReflexes
-    apiVersion: Optional[str] = __version__
-
-class XRDDatabaseEntries(BaseModel):
-    entries: List[XRDDatabaseEntry]
 
 
 class XRDResponse(BaseModel):
