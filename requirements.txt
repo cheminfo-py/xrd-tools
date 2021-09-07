@@ -1,14 +1,13 @@
-fastapi== 0.63.0
-uvicorn==0.13.4
-httptools==0.2.0
-uvloop==0.14.0
+fastapi== 0.68.1
+uvicorn==0.15.0
+httptools==0.3.0
+uvloop==0.16.0
 pytojcamp>0.0.1
 pymatgen==2022.0.6
 func-timeout==4.3.5
-python-dotenv==0.15.0
-motor==2.3.0
+python-dotenv==0.19.0
+motor==2.5.1
 pymongo==3.11.3
-diskcache==5.1.0
-onnxruntime==1.7.0
+diskcache==5.2.1
 joblib==1.0.1 
 scikit-learn==0.24.1
