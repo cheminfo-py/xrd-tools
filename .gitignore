@@ -203,4 +203,5 @@ tags
 
 *.bson
 dev
-mongo-data
+mongo-data/
+mongo-seed/
